@@ -75,7 +75,9 @@ class WebsocketPolicyServer:
                 logger.info(f"Connection from {websocket.remote_address} closed")
                 break
             except Exception:
-                await websocket.send(traceback.format_exc())
+                tb = traceback.format_exc()
+                logger.error("Error while handling request from %s:\n%s", websocket.remote_address, tb)
+                await websocket.send(tb)
                 await websocket.close(
                     code=websockets.frames.CloseCode.INTERNAL_ERROR,
                     reason="Internal server error. Traceback included in previous frame.",
