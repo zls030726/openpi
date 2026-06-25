@@ -16,7 +16,7 @@ class PaligemmaTokenizer:
         self._max_len = max_len
 
         # path = download.maybe_download("gs://big_vision/paligemma_tokenizer.model", gs={"token": "anon"})
-        path = download.maybe_download("/data5/Users/zls/model/pi05/paligemma_tokenizer.model") # zls add
+        path = download.maybe_download("/root/autodl-tmp/Users/zls/model/pi05/paligemma_tokenizer.model") # zls add
         with path.open("rb") as f:
             self._tokenizer = sentencepiece.SentencePieceProcessor(model_proto=f.read())
 
@@ -55,7 +55,7 @@ class FASTTokenizer:
 
         # Download base PaliGemma tokenizer
         # path = download.maybe_download("gs://big_vision/paligemma_tokenizer.model", gs={"token": "anon"})
-        path = download.maybe_download("/data5/Users/zls/model/pi05/paligemma_tokenizer.model") # zls add
+        path = download.maybe_download("/root/autodl-tmp/Users/zls/model/pi05/paligemma_tokenizer.model") # zls add
         with path.open("rb") as f:
             self._paligemma_tokenizer = sentencepiece.SentencePieceProcessor(model_proto=f.read())
 
@@ -158,7 +158,7 @@ class BinningTokenizer:
 
         # Download base PaliGemma tokenizer
         # path = download.maybe_download("gs://big_vision/paligemma_tokenizer.model", gs={"token": "anon"})
-        path = download.maybe_download("/data5/Users/zls/model/pi05/paligemma_tokenizer.model") # zls add
+        path = download.maybe_download("/root/autodl-tmp/Users/zls/model/pi05/paligemma_tokenizer.model") # zls add
         with path.open("rb") as f:
             self._paligemma_tokenizer = sentencepiece.SentencePieceProcessor(model_proto=f.read())
 
@@ -295,7 +295,7 @@ class FSQTokenizer:
 
         # Download base PaliGemma tokenizer
         # path = download.maybe_download("gs://big_vision/paligemma_tokenizer.model", gs={"token": "anon"})
-        path = download.maybe_download("/data5/Users/zls/model/pi05/paligemma_tokenizer.model") # zls add
+        path = download.maybe_download("/root/autodl-tmp/Users/zls/model/pi05/paligemma_tokenizer.model") # zls add
         with path.open("rb") as f:
             self._paligemma_tokenizer = sentencepiece.SentencePieceProcessor(model_proto=f.read())
 
