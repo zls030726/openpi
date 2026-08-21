@@ -130,6 +130,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+examples/libero_plus/.libero_plus/
 env/
 venv/
 ENV/
